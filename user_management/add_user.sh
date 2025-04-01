@@ -18,6 +18,7 @@ fi
 # Ask whether to disable password authentication
 read -p "Do you want to disable password authentication for '$username'? (y/n): " disable_password
 
+# Remove the part ' --gecos "" ' if you want to add user info
 if [ "$disable_password" == "y" ]; then
     sudo adduser --disabled-password --gecos "" $username
     sudo passwd -d "$username"
