@@ -1,13 +1,13 @@
 #!/bin/bash
 
+# this script is useful when you manage many datasync tasks via terraform with different source and destination locations,
+# and prefer not to use automatic scheduling (cron/eventbridge). instead of setting a schedule for each task,
+# you can manually trigger any task by adding its task id below and running this script as needed.
+
 # this script starts multiple aws datasync tasks using their task ids
 # it constructs the full arn for each task and starts the execution
 # optionally uses an aws cli profile if specified
 # ensure aws cli is configured with the necessary permissions
-
-# this script is useful when you manage many datasync tasks via terraform with different source and destination locations,
-# and prefer not to use automatic scheduling (cron/eventbridge). instead of setting a schedule for each task,
-# you can manually trigger any task by adding its task id below and running this script as needed.
 
 # configurable variables
 REGION="us-east-1"
