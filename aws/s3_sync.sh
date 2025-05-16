@@ -1,5 +1,10 @@
 #!/bin/bash
 
+# this script syncs multiple s3 bucket pairs between different regions
+# it uses aws cli and jq to perform sync and verify object count and size
+# source buckets are in ap-southeast-1 and destination buckets are in ap-south-1
+# you must configure the aws profile beforehand or attach proper iam role
+
 # define aws cli profile
 AWS_PROFILE="terraform-apse1"
 
